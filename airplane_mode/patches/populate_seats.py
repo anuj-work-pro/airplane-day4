@@ -1,12 +1,13 @@
-import frappe
 import random
 
+import frappe
+
+
 def execute():
-    tickets = frappe.get_all("Airplane Ticket", fields=["name"])
+	tickets = frappe.get_all("Airplane Ticket", fields=["name"])
 
-    for ticket in tickets:
-        seat = f"{random.randint(1,99)}{random.choice(['A','B','C','D','E'])}"
+	for ticket in tickets:
+		seat = f"{random.randint(1, 99)}{random.choice(['A', 'B', 'C', 'D', 'E'])}"
+		frappe.db.set_value("Airplane Ticket", ticket.name, "seat", seat)
 
-        frappe.db.set_value("Airplane Ticket", ticket.name, "seat", seat)
-
-    frappe.db.commit()
+	frappe.db.commit()
