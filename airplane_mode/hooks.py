@@ -248,4 +248,6 @@ app_license = "mit"
 # ignore_translatable_strings_from =
 
 
-fixtures = [{"doctype": "Custom Field", "filters": [["dt", "=", "Customer"]]}]
+fixtures = [{"doctype": "Shop Type"}]
+
+scheduler_events = {"daily": ["airplane_mode.tasks.send_rent_reminders"]}
