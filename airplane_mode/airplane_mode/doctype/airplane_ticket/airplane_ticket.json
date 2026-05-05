@@ -24,6 +24,7 @@
   "duration_of_flight",
   "column_break_qcxt",
   "departure_time",
+  "gate_no",
   "amended_from"
  ],
  "fields": [
@@ -93,16 +94,6 @@
    "label": "Airport Details"
   },
   {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Airplane Ticket",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
-  },
-  {
    "default": "Booked",
    "fieldname": "status",
    "fieldtype": "Select",
@@ -127,6 +118,7 @@
    "label": "Flight Price"
   },
   {
+   "fetch_from": "flight.price",
    "fieldname": "flight_price",
    "fieldtype": "Currency",
    "label": "Flight Price",
@@ -149,13 +141,29 @@
   {
    "fieldname": "column_break_lku8",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "flight.gate_number",
+   "fieldname": "gate_no",
+   "fieldtype": "Data",
+   "label": "Gate no"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Airplane Ticket",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-18 12:27:38.943050",
+ "modified": "2026-05-05 12:45:47.357529",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",
