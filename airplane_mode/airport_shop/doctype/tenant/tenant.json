@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format: {tenant_name}-{###}",
+ "autoname": "format: {tenant_name}",
  "creation": "2026-05-04 22:31:31.674336",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -30,7 +30,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-04 22:34:35.953078",
+ "modified": "2026-05-05 11:30:35.589653",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Tenant",

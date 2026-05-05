@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format: Shop-LEAD({lead_name})-{###}",
+ "autoname": "format: {lead_name}-{shop}",
  "creation": "2026-05-01 14:06:33.211312",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -32,7 +32,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-01 14:34:40.664714",
+ "modified": "2026-05-05 11:32:12.038215",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Shop Lead",

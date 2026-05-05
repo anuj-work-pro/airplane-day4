@@ -38,18 +38,3 @@ def update_shop_counts(airport):
 		airport,
 		{"total_shops": total, "occupied_shops": occupied, "available_shops": total - occupied},
 	)
-
-
-def send_rent_reminders():
-	settings = frappe.get_single("Shop Settings")
-
-	if not settings.enable_rent_reminder:
-		return
-
-	shops = frappe.get_all("Shop", filters={"status": "Occupied"}, fields=["name", "email"])
-
-	for shop in shops:
-		if shop.email:
-			frappe.sendmail(
-				recipients=shop.email, subject="Rent Due Reminder", message=f"Rent due for shop {shop.name}"
-			)

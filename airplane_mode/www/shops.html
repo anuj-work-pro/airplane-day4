@@ -1,6 +1,27 @@
-<h1>Shops</h1>
+<h1>Airport Shops</h1>
 
 {% for doc in shops %}
-  <h3>{{doc.shop_name}}</h3><br>
-  <a href="{{ doc.route }}">view details</a><br>
+  <div style="border: 1px solid #ccc; border-radius: 6px; margin-bottom: 20px; max-width: 500px;">
+    <div style="margin-left: 20px;">
+    <h3>{{doc.shop_name}}</h3><br>
+
+
+    <div style="margin-top: 10px;">
+      <a href="{{ doc.route }}"
+         style="
+           display: inline-block;
+           background-color: black;
+           color: white;
+           padding: 8px 15px;
+           text-decoration: none;
+           border-radius: 5px;
+           margin-bottom: 20px;
+         ">
+        View Details
+      </a>
+    </div>
+    </div>
+
+  </div>
 {% endfor %}
+

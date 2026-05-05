@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format: SHOP-{###}",
+ "autoname": "format: {name1}",
  "creation": "2026-05-01 13:31:49.029636",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -12,8 +12,9 @@
  "fields": [
   {
    "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name"
+   "fieldtype": "Select",
+   "label": "Name",
+   "options": "Stall\nWalk-Through\nNormal"
   },
   {
    "default": "0",
@@ -25,7 +26,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-01 14:16:40.061080",
+ "modified": "2026-05-05 11:33:44.148921",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Shop Type",
