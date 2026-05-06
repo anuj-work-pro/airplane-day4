@@ -23,13 +23,13 @@
   "column_break_cfob",
   "time_of_departure",
   "gate_number",
+  "section_break_fhab",
+  "crew_members",
+  "price",
   "section_break_ttnr",
   "route",
   "is_published",
-  "amended_from",
-  "section_break_fhab",
-  "crew_members",
-  "price"
+  "amended_from"
  ],
  "fields": [
   {
@@ -124,9 +124,11 @@
    "reqd": 1
   },
   {
+   "default": "Right Front gate",
    "fieldname": "gate_number",
-   "fieldtype": "Data",
-   "label": "Gate Number"
+   "fieldtype": "Select",
+   "label": "Gate Number",
+   "options": "Left Front gate\nRight Front gate\nBack gate"
   },
   {
    "fieldname": "section_break_ttnr",
@@ -181,7 +183,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2026-05-05 11:49:39.957593",
+ "modified": "2026-05-06 10:30:49.241922",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",
